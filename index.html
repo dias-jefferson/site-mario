@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Super Mario</title>
+  </head>
+  <body>
+    <div class="container-video">
+      <video src="./assets/video.mp4" autoplay muted loop></video>
+      <div class="video-mask"></div>
+    </div>
+    <div class="container">
+      <img
+        src="./assets/logo.png"
+        alt="logo super mario"
+        class="logo-mario-bros"
+      />
+      <p>Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
+      <p>
+        Você já se encontrou em uma situação de emergência com encanamento?
+        Vazamentos inesperados, canos entupidos ou torneiras que não param de
+        pingar? Não se preocupe, porque estamos aqui para salvar o dia!
+        Apresentamos a vocês os encanadores mais famosos do Reino dos Cogumelos
+        - Mario e Luigi!
+      </p>
+      <button class="contact-us" onclick="chamarFormulario()">
+        Fale conosco
+      </button>
+    </div>
+    <img
+      src="./assets/mario.png"
+      alt="mario & luigi"
+      class="image-mario-bros"
+    />
+
+    <form class="formulario">
+      <input type="text" placeholder="Seu Nome" />
+      <input type="tel" placeholder="Telefone" />
+      <textarea placeholder="Digite seu problema aqui"></textarea>
+      <button type="submit" class="contact-us" onclick="sumirFormulario()">Pedir Orçamento</button>
+    </form>
+    <div class="form-mask"></div>
+  </body>
+
+  <script>
+    const contactForm = document.querySelector(".formulario");
+    const formMask = document.querySelector(".form-mask");
+
+    function chamarFormulario() {
+      contactForm.style.transform = "translateX(-700px)";
+      // contactForm.style.left = "700px"
+      formMask.style.visibility = "visible"
+    }
+
+    function sumirFormulario() {
+      contactForm.style.transform = "translateX(-2000px)";
+      // contactForm.style.left = "-320px"
+      formMask.style.visibility = "hidden"
+    }
+  </script>
+</html>
